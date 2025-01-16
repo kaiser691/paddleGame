@@ -59,11 +59,6 @@ class Pad{
     }
 
     scoreGOver(scr){
-        if(frameCount%60==0){
-            if(this.collide){
-                this.score+=1;
-            }
-        }
         textSize(50);
         textAlign(CENTER);
         fill(255,0,0);
