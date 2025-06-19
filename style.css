@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('CursorTransparent.png'), auto;
+}
+html{
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    font-weight: bold;
+    font-style: bold;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+body{
+    background-color: #00ddff;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.entrance{
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    display: block;
+}
+.entrance #info-button{
+    position: absolute;
+    background-color: #ffffff;
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px 30px;
+    border: solid 5px #ff0000;
+    font-size: 30px;
+    color: #ff0000;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease-in-out;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.entrance #info-button:hover{
+    background-color: #a6aea6;
+    color: #901212;
+    border-color: #af2929;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+#title{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: red;
+    font-size: 2rem;
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    background-color: rgb(0, 0, 255);
+    border: ridge 10px #18e70d;
+    font-size: 50px;
+    width: 400px;
+    text-align: center;
+    margin: auto;
+    display: block
+}
+#play-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    transform: translate(-50%, -50%);
+    background-color: #00ff00;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: solid 5px #005eff;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff0000;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out,
+                background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
+   
+}
+#play-button:hover{
+    background-color: #00cc00;
+    color: #901212;
+    border-color: #0e4ead;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+.info{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px 40px;
+    border: solid 5px #005eff;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff0000;
+    cursor: pointer;
+    text-align: center;
+    display: none;
+    z-index: 1;
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+}
+.info p{
+    color: #196219;
+    font-size: 0.8em;
+    
+}
+.info h2{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;    
+}
+.info .donation{
+    color: rgb(0, 123, 255);
+}
+.info .donation a{
+    color: rgb(255, 0, 0);;
+    text-decoration: underline;
+}
+.info .donation a:hover{
+    color: rgb(188, 33, 33);
+}
+.info button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    background-color: red;
+}
+.info button:hover{
+    background-color: darkred;
+    transform: scale(1.1);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.scoreContainer{
+    position: absolute;
+    display: none;
+    color: red;
+    font-size: 50px;
+    top: 10px;
+    right: 20px; 
+}
+.gOverScore{
+    z-index: 3;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    border-radius: 10%;
+    display: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.scoretext{
+    color: red;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+
+}
+.gOverScoreText{
+    color: red;
+    font-size: 80px;
+    text-align: center;
+}
+#restart-button:hover{
+    background-color: red;
+    color: white;
+    transform: scale(1.1);
+}
+
+#restart-button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 100px;
+    height: 50px;
+    border-radius: 10%;
+    border: 2px ridge red;
+    font-size: 2rem;
+    color: white;
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    background-color:  #00ddff;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease-in-out;
+}
+.imgContainer{
+    width: 100%;
+    padding: 10px;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgContainer a img{
+    display: block;
+    margin: auto 10px auto 10px;
+    border-radius: 10px 0 10px 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.imgContainer a img:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+.gcashLogo{
+    height: 50px;
+}
+.paypalLogo{
+    height: 50px;
+}
+
+
+.qrContainer{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: white;
+    border-radius: 10%;
+    display: none;
+}
+.qrImg{
+    width: 100%;
+    border-radius: 0 0 10% 10%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.qrText{
+    display: block;
+    text-align: left;
+    font-size: 30px;
+    color: red;
+    white-space: nowrap;
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+}
+#qrHeader{
+    display: flex;
+    background-color: blue;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    height: 50px;
+}
+#exitQR{
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    color: white;
+    background-color: red;
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+#exitQR:hover{
+    background-color: darkred;
+    transform: scale(1.1);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 400px) {
+    #title{
+        font-size: 30px;
+        width: 300px;
+    }
+    #play-button{
+        font-size: 30px;
+        padding: 10px 20px;
+    }
+    .info{
+        width: 90%;
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+    .gOverScore{
+        width: 300px;
+        height: 300px;
+    }
+    .scoretext, .gOverScoreText{
+        font-size: 30px;
+    }
+    .qrContainer{
+        width: 300px;
+    }
+    .qrText{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #title{
+        font-size: 40px;
+        width: 350px;
+    }
+    #play-button{
+        font-size: 35px;
+        padding: 10px 20px;
+    }
+    .info{
+        width: 90%;
+        font-size: 25px;
+        padding: 15px 30px;
+    }
+    .gOverScore{
+        width: 350px;
+        height: 350px;
+    }
+    .scoretext, .gOverScoreText{
+        font-size: 40px;
+    }
+    .qrContainer{
+        width: 350px;
+    }
+    .qrText{
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 350px) {
+    #title{
+        font-size: 25px;
+        width: 250px;
+    }
+    #exit-button{
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+    }
+    #play-button{
+        font-size: 25px;
+        padding: 10px 20px;
+    }
+    #info-button{
+        font-size: 25px;
+        padding: 10px 20px;
+        
+    }
+    .info{
+        width: 90%;
+        font-size: 18px;
+        padding: 10px 10px;
+    }
+    .gOverScore{
+        width: 250px;
+        height: 250px;
+    }
+    .scoretext, .gOverScoreText{
+        font-size: 25px;
+    }
+    .qrContainer{
+        width: 250px;
+    }
+    .qrText{
+        font-size: 18px;
+    }
+    .exitQR{
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+    .gcashLogo,
+    .paypalLogo{
+        height: 40px;
+    }
+    .imgContainer{
+        justify-content: center;
+    }
+}
